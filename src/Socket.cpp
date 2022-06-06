@@ -363,7 +363,7 @@ tcp_server_socket::~tcp_server_socket() {
   close();
 }
 
-tcp_socket tcp_server_socket::accept() {
+[[nodiscard]] tcp_socket tcp_server_socket::accept() {
   SOCKET s{ INVALID_SOCKET };
   s = ::accept(sock, NULL, NULL);
   if (s == INVALID_SOCKET) {

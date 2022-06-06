@@ -298,7 +298,7 @@ public:
    *
    * @return tcp_socket
    */
-  tcp_socket accept();
+  [[nodiscard]] tcp_socket accept();
   /**
    * @brief stops listening
    *
